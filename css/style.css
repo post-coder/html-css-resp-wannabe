@@ -127,3 +127,63 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
+
+
+
+ /* risolviamo il container a larghezza fissa */
+
+ /* soluzione generica (bonus) */
+.container {
+    max-width: 1140px;
+    width: auto;
+}
+
+
+/* soluzione tablet */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/* soluzione mobile */
+@media screen and (max-width: 480px) {
+    /* dai 480px in giù la condizione si avvera e queste regole verranno aggiunte al documento */
+
+    .site-header {
+        padding: 0 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    /* rimuovo padding da tutte le col */
+    .row .col {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* rimuovo il margin bottom di .steps */
+    .steps {
+        margin-bottom: 0;
+    }
+
+    .why-us {
+        /* compenso l'eliminazione del margin bottom della sezione antestante con il padding top */
+        padding-top: 40px;
+        /* compenso anche l'eliminazione del margin bottom */
+        padding-bottom: 48px;
+
+        margin-bottom: 0;
+        
+        /* cambio il back color alla sezione .why-us */
+        background-color: #222222;
+    }
+
+
+}
